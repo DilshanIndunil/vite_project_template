@@ -1,0 +1,97 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #32005d, #270336);
+    position: relative;
+    overflow: hidden;
+
+    .back-button {
+
+        button {
+            text-decoration: none;
+            background: none;
+            border: none;
+            font-size: 3rem;
+            color: white;
+        }
+
+
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 1.5rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .form-container {
+        width: 90%;
+        max-width: 400px;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        backdrop-filter: blur(10px);
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 0.8rem;
+            margin: 1rem 0;
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+
+            .icon {
+                color: white;
+                font-size: 1.2rem;
+                margin-right: 0.5rem;
+            }
+
+            input {
+                flex: 1;
+                border: none;
+                outline: none;
+                background: transparent;
+                color: white;
+                font-size: 1rem;
+                padding: 0.5rem;
+
+                &::placeholder {
+                    color: rgba(255, 255, 255, 0.7);
+                }
+            }
+        }
+
+        .separator {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            margin: 0.5rem 0;
+        }
+
+        .verification-button {
+            width: 100%;
+            padding: 1.2rem;
+            border: none;
+            margin-top: 20px;
+            border-radius: 10px;
+            font-size: 1.3rem;
+            // font-weight: bold;
+            background: var(--gradient-btn);
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+
+            &:hover {
+                background: linear-gradient(90deg, #ff5e57, #9f44e3);
+            }
+        }
+    }
+}

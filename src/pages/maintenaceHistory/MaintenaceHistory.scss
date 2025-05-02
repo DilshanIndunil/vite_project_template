@@ -1,0 +1,208 @@
+/* Global Container Styles */
+.maintenance-history-container {
+    // background: linear-gradient(135deg, #3b0051, #290038);
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto;
+
+    /* QR Scanner Styles */
+    .qr-scanner {
+        text-align: center;
+        margin-top: 100px;
+
+        p {
+            color: #ffffff;
+            font-size: 18px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        canvas {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    /* Details Styles */
+    .details {
+        width: 100%;
+        max-width: 500px;
+        /* Increased for larger screens */
+        margin-top: 20px;
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+            .label {
+                font-size: 1.6rem;
+                font-weight: 600;
+                color: #ffffff;
+            }
+
+            .value {
+                font-size: 1.3rem;
+                font-style: italic;
+                color: #d6d6d6;
+            }
+        }
+
+        .history-list {
+            margin-top: 20px;
+
+            .history-card {
+                background: rgba(255, 255, 255, 0.12);
+                padding: 20px;
+                margin-bottom: 15px;
+                border-radius: 12px;
+                box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+                }
+
+                p {
+                    margin: 0;
+                    line-height: 1.8;
+                    font-size: 1rem;
+
+                    strong {
+                        font-weight: 700;
+                        color: var(--gradient-btn);
+                    }
+                }
+            }
+
+            p {
+                color: #cccccc;
+                font-size: 1.3rem;
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    /* Buttons Styles */
+    .buttons {
+        margin-top: 30px;
+
+        .back-button {
+            background: var(--gradient-btn);
+            color: #3b0051;
+            border: none;
+            padding: 12px 25px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+                background: linear-gradient(135deg, #ffae42, #cc8a35);
+                transform: scale(1.05);
+            }
+
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+    }
+
+    /* Heading Styles */
+    h1 {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+        margin: 20px 0;
+
+        .back-button {
+            background: var(--gradient-btn);
+            color: white;
+            border: none;
+            padding: 13px 23px;
+            font-size: 1.7rem;
+            font-weight: bold;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-right: 20px;
+            /* Space between the button and title */
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s ease, transform 0.2s ease;
+
+            &:hover {
+                background: linear-gradient(135deg, #ffae42, #cc8a35);
+                transform: scale(1.1);
+            }
+
+            &:active {
+                transform: scale(0.95);
+            }
+        }
+
+        span {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .maintenance-history-container {
+        padding: 15px;
+
+        .details {
+            .detail-item {
+                flex-direction: column;
+                text-align: center;
+
+                .label,
+                .value {
+                    font-size: 1.2rem;
+                }
+            }
+
+            .history-list {
+                .history-card {
+                    padding: 15px;
+
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .buttons {
+            .back-button {
+                color: white;
+                padding: 20px 30px;
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .qr-scanner {
+        margin-top: 50px;
+
+        p {
+            font-size: 16px;
+        }
+    }
+}

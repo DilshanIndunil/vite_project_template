@@ -1,0 +1,31 @@
+/* index.css or index.scss */
+
+/* Global styles for the whole app */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --gradient-btn: linear-gradient(to right, #8000ff, #fa6108);
+    --gradient-btn-hover: linear-gradient(to right, #38214f, #493428);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2d014e;
+    /* color: #ffffff; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #ffffff;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* Additional global styles */
